@@ -1,0 +1,23 @@
+<img style="margin-left: -17em" src="../../assets/debugging.PNG" alt="">
+<br>
+<br>
+<h4>Steps:</h4>
+<h6>1.Open DevTools and go to Sources tab</h6>
+<h6>2.Press CTRL + P to open your file and debug away!</h6>
+<br><br>
+<h3>Calculating Result Number</h3>
+<hr>
+<div class="row">
+  <button (click)="mainFunction()" class="col-md-6 btn btn-primary">Calculate!</button>
+  <div class="col-md-6">{{this.resultNumber}}</div>
+</div>
+<br>
+<h3>Checking App Name Exist In Array</h3>
+<hr>
+<div class="row">
+  <input type="text" placeholder="Child Name" class="col-md-3" [(ngModel)]="appName">
+  <button (click)="checkAppNameExistInString(appName)" class="col-md-3 btn btn-primary">Check!</button>
+  <div class="col-md-6" *ngIf="appInArray && showResult" style="color:green;font-weight: bold">{{appName}} is indeed in the array!</div>
+  <div class="col-md-6" *ngIf="!appInArray && showResult" style="color:green;font-weight: bold">Ops! {{appName}} can`t be found here!</div>
+</div>
+<br><br>

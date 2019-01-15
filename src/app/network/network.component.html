@@ -1,0 +1,24 @@
+<img style="margin-left: -17em;width: 148%;" src="../../assets/network.PNG" alt="">
+<br>
+<br>
+<h4>Steps:</h4>
+<h6>1.Open DevTools and go to Network Tab</h6>
+<h6>2.Select the request or the files you want to check!</h6>
+<br><br>
+<h3>Getting All Countries HTTP Request! Result Number</h3>
+<hr>
+<button (click)="getAllCountries()">Get All Countries</button>
+<br>
+<br>
+<table id="countries" *ngIf="countries">
+  <tr>
+    <th>Name</th>
+    <th>Capital</th>
+    <th>Region</th>
+  </tr>
+  <tr *ngFor="let country of countries">
+    <td>{{country.name}}</td>
+    <td>{{country.capital}}</td>
+    <td>{{country.region}}</td>
+  </tr>
+</table>
